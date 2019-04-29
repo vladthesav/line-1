@@ -5,8 +5,8 @@ import numpy as np
 class DBLPDataLoader:
     def __init__(self, graph_file):
         self.g = nx.read_gpickle(graph_file)
-        self.num_of_nodes = len(list((self.g).nodes))
-        self.num_of_edges = len(list((self.g).edges))
+        self.num_of_nodes = len((self.g).nodes)
+        self.num_of_edges = len((self.g).edges)
         self.edges_raw = self.g.edges(data=True)
         self.nodes_raw = self.g.nodes(data=True)
 
